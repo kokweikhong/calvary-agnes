@@ -8,6 +8,14 @@
   --font-size-std: 1rem;
 }
 
+@media (min-width: 768px) {
+  :root {
+  --font-size-lg: 2rem;
+  --font-size-md: 1.75rem;
+  --font-size-std: 1.5rem;
+  }
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -26,9 +34,25 @@ section {
   overflow-y: hidden;
 }
 
-#hero {
-  overflow-y: auto;
+.title {
+  position: relative;
+  padding: 2rem;
 }
+
+.title h2 {
+  color: var(--color-gold);
+}
+
+.title h2::after {
+  content: "";
+  width: 3.5rem;
+  height: 3px;
+  background-color: var(--color-gold);
+  position: absolute;
+  left: 2rem;
+  bottom: 2rem;
+}
+
 
 /* h1 { */
 /*   font-size: var(--font-size-md); */
@@ -105,8 +129,8 @@ header .nav__link.close-menu {
 }
 
 header .nav__link.close-menu svg {
-  height: 1.5rem;
-  width: 1.5rem;
+  height: var(--font-size-lg);
+  width: var(--font-size-lg);
 }
 
 header .nav__link.close-menu svg path {
@@ -118,8 +142,8 @@ header .burger-menu {
 }
 
 header .burger-menu svg {
-  height: 1.5rem;
-  width: 1.5rem;
+  height: var(--font-size-lg);
+  width: var(--font-size-lg);
 }
 
 header .burger-menu svg path {
@@ -130,18 +154,6 @@ header .burger-menu svg path {
 
 
 /* HERO SECTION */
-
-#hero .company-image {
-  height: 100%;
-}
-
-#hero .company-image img {
-  object-fit: cover;
-  width: 400px;
-  height: 100%;
-  left: 1220px;
-}
-
 #hero {/*{{{*/
   height: 100vh;
   background-repeat: no-repeat;
@@ -156,6 +168,12 @@ header .burger-menu svg path {
   position: relative;
   display: block;
   top: 60%;
+}
+
+@media (min-width: 768px) {
+  .hero__intro {
+    top: 50%
+  }
 }
 
 .hero__intro p:nth-child(3),
@@ -189,38 +207,23 @@ header .burger-menu svg path {
   border: 2px solid var(--color-gold);
   border-radius: 3px;
   cursor: pointer;
-}
-/*}}}*/
+}/*}}}*/
 /* HERO SECTION END */
 
-.title {
-  position: relative;
-  padding: 2rem;
-}
-
-.title h2 {
-  color: var(--color-gold);
-}
-
-.title h2::after {
-  content: "";
-  width: 3.5rem;
-  height: 3px;
-  background-color: var(--color-gold);
-  position: absolute;
-  left: 2rem;
-  bottom: 2rem;
-}
 
 /* CLIENT SECTION */
 .clients {/*{{{*/
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  text-align: center;
+}
+
+.client {
+  flex: 1 1 32%;
 }
 
 .clients img {
-  flex: 1 1 30%;
   max-width: 100px;
   max-height: 100px;
 }
@@ -256,7 +259,7 @@ header .burger-menu svg path {
 
 
 /* SERVICE SECTION */
-#service {
+#service {/*{{{*/
   display: flex;
   flex-wrap: wrap;
 }
@@ -275,9 +278,13 @@ header .burger-menu svg path {
 
 #service .sectors {
   flex: 1 1 30%;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
 }
 
 #service .sector {
+  flex: 1 1 100%;
   padding: 1rem;
   text-align: center;
 }
@@ -299,7 +306,7 @@ header .burger-menu svg path {
   text-align: center;
   align-self: center;
 }
-
+/*}}}*/
 /* SERVICE SECTION END */
 
 /* PROJECT SECTION */
@@ -320,6 +327,12 @@ header .burger-menu svg path {
   width: 100%;
   height: 100%;
   max-height: 450px;
+}
+
+@media (min-width: 768px) {
+  .project img {
+    max-height: 700px;
+  }
 }
 
 .project span {
@@ -345,14 +358,19 @@ header .burger-menu svg path {
 #socialproof {/*{{{*/
   display: flex;
   flex-wrap: wrap;
+  text-align: center;
+  align-items: center;
 }
 
 .testimonials {
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 .testimonial {
+  width: 100%;
   margin: 1rem;
   padding: .2rem;
   background-color: var(--color-gold);
@@ -363,17 +381,33 @@ header .burger-menu svg path {
 .testimonial img {
   width: 100%;
   height: 100%;
-}/*}}}*/
+}
+
+@media (min-width: 768px) {
+  .testimonial {
+    flex: 1 1 30%;
+  }
+  .testimonial img {
+    width: 100%;
+    height: 100%;
+  }
+}
+/*}}}*/
 /* TESTIMONIAL SECTION END */
 
 /* CONTACT SECTION */
-
-.profile {
+.profile {/*{{{*/
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
   height: 50vh;
   position: relative;
+}
+
+@media (min-width: 768px) {
+  .profile {
+    height: 80vh;
+  }
 }
 
 .infos {
@@ -388,6 +422,13 @@ header .burger-menu svg path {
   padding: .5rem;
   color: var(--color-gold);
   font-weight: 900;
+}
+
+@media (min-width: 768px) {
+  .infos {
+    left: 3rem;
+    bottom: 2rem;
+  }
 }
 
 .info span {
@@ -444,5 +485,9 @@ header .burger-menu svg path {
   height: 1.5rem;
   margin-left: .5rem;
 }
-
+/*}}}*/
 /* CONTACT SECTION END */
+
+footer {
+  background-color: var(--color-white);
+}
