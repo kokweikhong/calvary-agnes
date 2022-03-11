@@ -23,6 +23,11 @@ body {
 
 section {
   overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+#hero {
+  overflow-y: auto;
 }
 
 /* h1 { */
