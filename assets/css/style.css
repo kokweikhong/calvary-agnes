@@ -615,6 +615,24 @@ header .burger-menu svg path {
   }
 }
 
+@media (min-width: 1200px) {
+  .contact {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: stretch;
+  }
+  .profile {
+    flex: 1 1 60%;
+    padding: 10px;
+  }
+  #contact form {
+    flex: 1 1 30%;
+    padding: 50px;
+    max-width: 600px;
+  }
+}
+
 .infos {
   position: absolute;
   bottom: 0;
@@ -656,6 +674,7 @@ header .burger-menu svg path {
   justify-content: space-between;
   align-items: center;
   background-color: var(--color-white);
+  padding: 50px;
 }
 
 .contact form input[type='text'],
@@ -695,4 +714,5 @@ header .burger-menu svg path {
 
 footer {
   background-color: var(--color-white);
+  padding: 10px;
 }
