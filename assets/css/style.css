@@ -204,6 +204,7 @@ header .burger-menu svg path {
     background-color: transparent;
   }
   header .nav__link {
+    margin-right: 10px;
     padding: 0 20px;
   }
   header .nav__link a {
@@ -279,27 +280,29 @@ header .burger-menu svg path {
 
 /* ABOUT SECTION */
 #about {/*{{{*/
-  height: 80vh;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-  /* background-attachment: scroll; */
-  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
-#about h1 {
-  position: absolute;
-  width: 100%;
-  top: 20%;
-  padding: 2%;
+#about .title {
+  flex: 1 1 100%;
+}
+
+#about .about__content {
+  flex: 1 1 100%;
+  margin-bottom: 20px;
+  padding: 20px;
+  min-height: 50vh;
   text-align: center;
   color: var(--color-gold);
-}
-
-@media (min-width: 768px) {
-  #about h1 {
-    top: 30%;
-  }
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 /*}}}*/
 /* ABOUT SECTION END */
@@ -497,10 +500,6 @@ header .burger-menu svg path {
   .project img {
     width: 550px;
   }
-  /* .project img { */
-  /*   width: 300px; */
-  /*   height: 700px; */
-  /* } */
 }
 
 .project span {
@@ -516,8 +515,9 @@ header .burger-menu svg path {
 #project .swiper-pagination-bullet-active {
   background-color: var(--color-gold);
 }
-#project swiper-button-prev,
-#project swiper-button-next {
+
+#project .swiper-button-prev,
+#project .swiper-button-next {
   color: var(--color-gold);
 }/*}}}*/
 /* PROJECT SECTION END */
