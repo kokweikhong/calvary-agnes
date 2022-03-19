@@ -640,11 +640,14 @@ header .burger-menu svg path {
   .profile {
     flex: 1 1 60%;
     padding: 10px;
+    background-position: center 0;
+    height: 90vh;
   }
   #contact form {
     flex: 1 1 30%;
     padding: 50px;
-    max-width: 600px;
+    min-width: 750px;
+    max-width: 750px;
   }
 }
 
