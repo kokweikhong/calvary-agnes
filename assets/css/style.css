@@ -344,8 +344,11 @@ header .burger-menu svg path {
     display: grid;
     grid-template-areas:
       "title title title"
+      "image image sub-title"
+      "image image content"
       "image image desc"
       "image image button";
+    grid-column-gap: 25px;
   }
   .product h2 {
     grid-area: title;
@@ -359,22 +362,34 @@ header .burger-menu svg path {
     min-height: 100%;
     object-fit: cover;
   }
+  .product h3 {
+    grid-area: sub-title;
+  }
+  .product ul {
+    grid-area: content;
+  }
+  .product ul li {
+    margin-left: 5px;
+  }
   .product p {
     grid-area: desc;
-    margin-left: 10px;
   }
   .product a {
     grid-area: button;
     /* margin: auto; */
     justify-self: start;
     align-self: end;
-    margin-left: 10px;
   }
 }
 
 .product {
-  padding: 5% 1rem;
+  padding: 5% 15px;
   border: .05rem solid var(--color-white);
+}
+
+.product ul {
+  padding: 5% 15px;
+  font-weight: 600;
 }
 
 .product img {

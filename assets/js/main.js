@@ -25,7 +25,7 @@ window.onscroll = () => {
 };
 
 var typed = new Typed('.typed', {
-  strings: ['Composite Decking', 'Timber Wood'],
+  strings: ['Composite Decking', 'Timber Decking', 'Wood Flooring'],
   stringsElement: null,
   typeSpeed: 80,
   startDelay: 500,
