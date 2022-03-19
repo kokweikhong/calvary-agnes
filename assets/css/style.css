@@ -156,8 +156,8 @@ header .nav__links.show-menu {
   transition: all 0.3s ease-in 0s;
 }
 
-.nav__link.active a:after,
-.nav__link a:hover:after {
+.nav__link.active a:after {
+/* .nav__link a:hover:after { */
   width: 100%;
 }
 

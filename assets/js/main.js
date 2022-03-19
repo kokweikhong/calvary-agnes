@@ -10,7 +10,7 @@ window.onscroll = () => {
   var current = "";
   sections.forEach((section) => {
     const sectionTop = section.offsetTop;
-    if (window.scrollY >= sectionTop - 60) {
+    if (window.scrollY >= sectionTop - 20) {
       current = section.getAttribute("id");
     }
     nav_links.forEach((link) => {
